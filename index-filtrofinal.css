@@ -1,0 +1,155 @@
+/* ==================
+   ESTILOS ESPECÍFICOS PARA FILTRO FINAL NACIONAL
+   Este archivo extiende index.css con estilos adicionales
+================== */
+
+/* Header con énfasis en Filtro Final */
+.filtro-final-header .header-text p {
+  color: var(--naranja-light);
+  font-weight: 600;
+}
+
+/* Hero Section con badge especial */
+.filtro-final-hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+}
+
+.badge-filtro-final {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important;
+  color: #1a1a1a !important;
+  font-weight: 700 !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-size: 0.9rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3) !important;
+  animation: pulseGold 2s ease-in-out infinite !important;
+}
+
+@keyframes pulseGold {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.5);
+  }
+}
+
+/* Aviso de anticipo */
+.aviso-anticipo {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border: 2px solid var(--naranja-primary);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--gris-oscuro);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.aviso-anticipo svg {
+  flex-shrink: 0;
+  color: var(--naranja-primary);
+  margin-top: 2px;
+}
+
+.aviso-anticipo span {
+  flex: 1;
+}
+
+/* Estilos específicos para el upload del anticipo */
+.file-upload-anticipo {
+  border: 2px dashed var(--naranja-primary) !important;
+  background: linear-gradient(135deg, #fff8f5 0%, #fff0eb 100%) !important;
+}
+
+.file-upload-anticipo:hover {
+  border-color: var(--naranja-dark) !important;
+  background: linear-gradient(135deg, #fff0eb 0%, #ffe8dc 100%) !important;
+}
+
+.file-upload-anticipo .file-upload-label svg {
+  color: var(--naranja-primary);
+}
+
+.file-upload-anticipo .file-upload-label span {
+  color: var(--naranja-dark);
+  font-weight: 600;
+}
+
+/* Preview del anticipo con borde distintivo */
+.file-upload-anticipo .file-preview.active {
+  border: 3px solid var(--naranja-primary);
+}
+
+/* Estilos para cuando hay imagen cargada */
+.file-upload-anticipo .file-preview img {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(242, 101, 34, 0.2);
+}
+
+/* Botones de acción del anticipo */
+.file-upload-anticipo .btn-file-action.btn-edit {
+  background: var(--naranja-primary);
+  color: white;
+}
+
+.file-upload-anticipo .btn-file-action.btn-edit:hover {
+  background: var(--naranja-dark);
+}
+
+/* Estado de éxito mejorado para Filtro Final */
+.pantalla-exito .exito-titulo {
+  background: linear-gradient(135deg, var(--naranja-primary), #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .aviso-anticipo {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .aviso-anticipo svg {
+    margin-top: 0;
+  }
+}
+
+/* Step header con énfasis especial en paso 5 */
+.form-step[data-step="5"] .step-header .step-number {
+  background: linear-gradient(135deg, var(--naranja-primary), #FFD700);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.form-step[data-step="5"] .step-header .step-info h3 {
+  color: var(--naranja-dark);
+}
+
+/* Indicador visual de que el comprobante es obligatorio */
+.file-upload-anticipo::before {
+  content: "📋 OBLIGATORIO";
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--naranja-primary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+
+.file-upload-anticipo {
+  position: relative;
+}
