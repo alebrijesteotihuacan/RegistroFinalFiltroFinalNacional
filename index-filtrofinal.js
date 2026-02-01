@@ -1095,7 +1095,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function inicializarAplicacion() {
   cargarRegistrosDesdeLocalStorage();
-  verificarEspacioStorage();
+  // verificarEspacioStorage(); // Deshabilitado - los datos se guardan en Firebase
   configurarEventos();
   inicializarFormulario();
   actualizarContadores();
